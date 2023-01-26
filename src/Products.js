@@ -8,20 +8,24 @@ function Products(){
   useEffect(function(){
     async function getData(){
       const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-      const myjson = response.json()
+      const myjson = await response.json()
       setPosts(myjson)
+      console.log(posts)
 
     }
-
-  })
+    getData()
+  }, [])
   return (
-    <div className="product">
+    <div className="products">
       {
+
         posts.map(function(post){
-          <Product title={post.title} body={post.body} />
+          return <Product title={post.title} body={post.body} />
 
         })
       }
     </div>
   )
 }
+
+export default Products
