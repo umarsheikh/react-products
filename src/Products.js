@@ -15,6 +15,8 @@ function Products(){
     }
     getData()
   }, [])
+  // the function inside useEffect is getting called only once, this is due to the [] being passed.
+  // when products component is rendered, the useEffect function is called only once.
   return (
     <div className="products">
       {
