@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState, RouterProvider } from 'react'
+import { useState } from 'react'
+import { RouterProvider } from 'react-router-dom'
 import MyRouter from './MyRouter'
 import Products from './Products'
 import PostComments from './PostComments'
