@@ -22,7 +22,7 @@ function Products(){
       {
 
         posts.map(function(post){
-          return <Product title={post.title} body={post.body} />
+          return <Product title={post.title} body={post.body} id={post.id} />
 
         })
       }

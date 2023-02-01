@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import PostComment from './PostComment'
 
 function PostComments(props){
   const params = useParams()
@@ -16,7 +17,7 @@ function PostComments(props){
       {
         comments.map(function(comment){
           return (
-          <Comment comment = { comment } />
+          <PostComment comment = { comment } />
           )
         })
       }
