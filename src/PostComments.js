@@ -10,7 +10,7 @@ function PostComments(props){
       .then(function(json){
         setComments(json)
       })
-  })
+  }, [])
   console.log(comments)
 }
 
