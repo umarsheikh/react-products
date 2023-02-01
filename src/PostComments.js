@@ -11,7 +11,17 @@ function PostComments(props){
         setComments(json)
       })
   }, [])
-  console.log(comments)
+  return (
+    <div class="comments">
+      {
+        comments.map(function(comment){
+          return (
+          <Comment comment = { comment } />
+          )
+        })
+      }
+    </div>
+  )
 }
 
 export default PostComments
