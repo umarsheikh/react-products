@@ -1,5 +1,6 @@
 //https://jsonplaceholder.typicode.com/posts
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Product from './Product'
 
 function Products(){
@@ -19,6 +20,7 @@ function Products(){
   // when products component is rendered, the useEffect function is called only once.
   return (
     <div className="products">
+      <Link to='/posts/create'>Create new post</Link>
       {
 
         posts.map(function(post){
